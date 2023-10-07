@@ -87,8 +87,3 @@ jobs:
         uses: codecov/codecov-action@v1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-
-      - name: "🐳 Docker"
-        run: |
-          docker login -u ${DOCKER_USER} -p ${DOCKER_PASSWORD}
-          docker build --build-arg NODE_VERSION=${{ matrix.node }} -t ${{ github.event.repository.name }} .
