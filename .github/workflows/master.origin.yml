@@ -2,9 +2,9 @@ name: "CI/CD"
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master-origin ]
   pull_request:
-    branches: [ master ]
+    branches: [ master-origin ]
 
 env:
   DOCKER_USER: ${{ secrets.DOCKER_USER }}
